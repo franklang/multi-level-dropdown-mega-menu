@@ -1,0 +1,63 @@
+.screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+// core
+.desktop-mega-menu {
+  position: relative;
+  z-index: 2;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .hidden {
+    display: none;
+  }
+  .in-path {}
+  .level0,
+  .level1 {
+    display: table;
+    width: 100%;
+    > li {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .level0 {
+    table-layout: fixed;
+    position: relative;
+  }
+  // Foundation 6 SASS
+  // .main-dropdown,
+  // .sub-dropdown {
+  //   $main-dropdown-width: ('large', 'xlarge');
+  //   @each $item in $main-dropdown-width {
+  //     @include breakpoint($item) {
+  //       width: map-get($breakpoints, $item);
+  //     }      
+  //   }    
+  // }
+  .main-dropdown {
+    position: absolute;
+    top: 100%;
+  }
+}
+
+// skin
+.desktop-mega-menu {
+  .in-path {
+    background: tomato;
+  }
+  .level0 {
+    text-align: center;
+  }  
+  .main-dropdown {
+    background: pink;
+  }
+}
